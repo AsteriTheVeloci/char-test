@@ -43,7 +43,7 @@
         "components": [
           {
             "type": 10,
-            "content": "```ansi\n\u001b[1;2m\u001b[1;34m\u001b[1;35mOverview\u001b[0m\u001b[1;35m\u001b[0m\u001b[0m\nOnce only identifiable to the name *Ashcroft*. This man was once only a gray-zoned hitman prior to joining the `League of Villains` after years of his stubborn stance of being a Vigilante. Commonly identified by his consistent stoic demeanor, long white coat, and boldened ringed eyes; the first to reappear after vanishing."
+            "content": "```fix\nOverview\n```\nOnce only identifiable to the name *Ashcroft*. This man was once only a gray-zoned hitman prior to joining the `League of Villains` after years of his stubborn stance of being a Vigilante. Commonly identified by his consistent stoic demeanor, long white coat, and boldened ringed eyes; the first to reappear after vanishing."
           }
         ],
         "accessory": {
