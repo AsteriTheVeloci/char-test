@@ -1,0 +1,324 @@
+\
+:root {
+  --background: #251e2e;
+  --panel: #1a1421;
+  --highlight: #8d5cff;
+  --quote-subtext: #b7adc7;
+  --bio-text: #b9b0c7;
+  --text: #eaeaea;
+  --subtext: #9b8ca7;
+  --stats-empty: #3d3351;
+  --border: rgba(255, 255, 255, 0.15);
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #17121d;
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+a {
+  color: #c9adff;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.wiki-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 0.45rem;
+  background: var(--background);
+}
+
+.hero { margin-bottom: 25px; }
+.hero img {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.quote-box {
+  max-width: 1250px;
+  margin: 15px auto 25px;
+  padding: 14px 18px;
+  border-left: 4px solid var(--highlight);
+  border-radius: 8px;
+  background: var(--panel);
+  text-align: center;
+}
+.quote-box p { margin: 0; text-align: left; }
+.quote-box p:first-child { margin-left: 20px; font-size: 1.1em; }
+.quote-subtext { margin-top: 6px !important; color: var(--quote-subtext); }
+
+.profile-card {
+  float: right;
+  width: min(100%, 460px);
+  margin: 0 0 20px 25px;
+  padding: 14px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.profile-name {
+  margin: -1px 0 10px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+.profile-card::before {
+  content: "CHARACTER PROFILE";
+  display: block;
+  margin: -3px 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--subtext);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.tab-button {
+  appearance: none;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 11px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+.tab-button:hover,
+.tab-button.active {
+  background: #30253d;
+  color: #fff;
+}
+.profile-tabs .tab-button.active,
+.stats-tabs .tab-button.active {
+  box-shadow: inset 0 -2px 0 var(--highlight);
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.tab-panel img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+.image-caption {
+  margin: 0 0 12px;
+  color: var(--bio-text);
+  text-align: center;
+  font-size: 14px;
+}
+
+.infobox-section { margin-top: 14px; }
+.infobox-section.first { margin-top: 8px; }
+.infobox-section-title {
+  padding: 5px 8px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(141, 92, 255, 0.07);
+  color: var(--text);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+}
+.info-table th,
+.info-table td {
+  padding: 6px;
+  text-align: left;
+  vertical-align: top;
+}
+.info-table th { width: 28%; }
+.info-table tr + tr { border-top: 1px solid var(--border); }
+
+.subtext { color: var(--subtext); }
+.alive { color: rgb(97, 189, 109); }
+.family-list { padding: 8px 8px 4px 18px; }
+
+main { min-width: 0; }
+
+h2 {
+  position: relative;
+  margin: 34px 0 14px;
+  padding: 0 0 5px 12px;
+  border-bottom: 1px solid var(--border);
+  color: #fff;
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 5px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--highlight);
+}
+h3 { color: #fff; }
+h4 { margin-top: -8px; color: var(--subtext); }
+
+.contents-card {
+  max-width: 360px;
+  margin: 14px 0 30px;
+  padding: 12px 18px 14px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--highlight);
+  border-radius: 4px;
+  background: var(--panel);
+  line-height: 1.8;
+}
+.contents-title {
+  margin: -2px 0 7px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+  color: var(--text);
+}
+.contents-card a { display: block; }
+.contents-card .nested { padding-left: 22px; margin-top: 2px; }
+
+.float-image {
+  display: inline-block;
+  margin: 5px 15px 5px 0;
+  text-align: center;
+}
+.float-image img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+}
+.float-image figcaption {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--text);
+}
+.float-image.left { float: left; }
+.float-image.right { float: right; margin: 5px 0 5px 15px; }
+.float-image.large { width: 200px; }
+.float-image.smallish { width: 200px; }
+.float-image.ability-image { width: 158px; }
+.float-image.ability-image.small { width: 116px; }
+
+.clear { clear: both; }
+.ability-list { padding-left: 22px; }
+
+.stats-card {
+  max-width: 900px;
+  margin: 15px auto;
+  padding: 14px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.stats-table {
+  width: 100%;
+  border-spacing: 8px;
+  border-collapse: separate;
+  color: var(--text);
+}
+.stats-table th,
+.stats-table td { padding: 2px; }
+.stats-table th {
+  width: 20%;
+  text-align: center;
+  font-size: 1.05rem;
+}
+.stats-table td:last-child {
+  width: 10%;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+.bar {
+  height: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--stats-empty);
+}
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--highlight);
+}
+
+.trivia-section {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 0.45rem;
+  background: var(--background);
+}
+.trivia-image {
+  display: block;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 14px;
+  border-radius: 6px;
+}
+.trivia-section ul {
+  margin: 0;
+  padding-left: 22px;
+}
+.trivia-section ul ul {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  body { font-size: 16px; }
+  .wiki-page { padding: 14px; }
+  .profile-card {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 25px;
+  }
+  .float-image.left,
+  .float-image.right {
+    float: none;
+    display: block;
+    width: min(100%, 240px);
+    margin: 10px auto;
+  }
+  .trivia-image { width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .profile-tabs .tab-button,
+  .stats-tabs .tab-button {
+    flex: 1 1 30%;
+  }
+  .stats-table th { width: 28%; }
+  .stats-table td:last-child { width: 12%; }
+  .quote-box p:first-child { margin-left: 0; }
+}
